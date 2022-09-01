@@ -18,14 +18,52 @@
         <section>
             <div class="mb-3 w-50">
                 <input id="search-field" type="email" class="form-control" id="exampleFormControlInput1"
-                    placeholder="Searcg your phone">
-                <div class="btn btn-primary m-1" id="btn-search">Search</div>
+                    placeholder="Search your phone">
+                <div class="btn btn-primary mt-1" id="btn-search">Search</div>
             </div>
         </section>
         <!-- diplay search result  -->
         <section>
             <div>
                 <div id="phone-container" class="row row-cols-1 row-cols-md-3 g-4">
+                </div>
+                <div id="no-found-message" class="mt-4 d-none">
+                    <h3 class="text-warning">No phones Found. Please try a new search</h3>
+                </div>
+            </div>
+            <!-- show when there is more than 10 items -->
+            <div id="show-all" class="text-center d-none">
+                <div id="btn-show-all" class="btn btn-primary ">Show All</div>
+            </div>
+        </section>
+        <!-- loader -->
+        <section class="d-none" id="loader">
+            <div style="height: 400px;" class="d-flex justify-content-center align-items-center">
+                <div class="spinner-border text-success" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+            </div>
+        </section>
+        <!-- modal contents -->
+        <section>
+            <!-- Button trigger modal -->
+
+            <!-- Modal -->
+            <div class="modal fade" id="phoneDetailModal" tabindex="-1" aria-labelledby="phoneDetailModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="phoneDetailModalLabel"></h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div id="phone-details" class="modal-body">
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
